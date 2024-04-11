@@ -1,0 +1,17 @@
+{
+	"name": "Basic_Analysis_Tokyo",
+	"properties": {
+		"content": {
+			"query": "-- Count number of athelets per country\n\nSELECT Country, COUNT(*) as TotalAthetlets \nfrom athelets \ngroup BY Country \norder by TotalAthetlets desc;\n\n-- Calculate the total medals won by each country\nSELECT team_country, sum(gold) as Gold, sum(silver) as Silver, SUM(bronze) as Bronze\nfrom medals\nGROUP by team_country\nORDER by gold desc;\n\n-- Calculate the average number of entries by gender\nSELECT Discipline, AVG(Female) Avg_Female, AVG(Male) Avg_Male \nfrom entriesgender\ngroup by Discipline\norder by Avg_Female desc;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "TokyoDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"name": "TokyoDB",
+	"properties": {
+		"Name": "TokyoDB",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://tokyo-olympic-data@tokyodataerick.dfs.core.windows.net/TokyoDB",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "tokyo-erick-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 5,
+		"ObjectId": "060a1c53-7370-46eb-b9b4-bb96ec4846ed"
+	},
+	"type": "DATABASE"
+}
